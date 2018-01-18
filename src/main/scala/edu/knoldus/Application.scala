@@ -15,14 +15,14 @@ object Application {
     val num6 = 2
     val list1 = List(num1, num2, num3, num4)
     val list2 = List(num5, num6)
+    val function = (x: Int) =>  x % 2 == 0
+    log.info(s"${operationObject.length[Int](list1)}")
 
-    log.info(s"${operationObject.length(list1)}")
-
-    log.info(s"${operationObject.concateList(list1, list2)}")
+    log.info(s"${operationObject.concateList[Int](list1, list2)}")
 
     log.info(s"${operationObject.hasSubsequence[Int](list1, list2)}")
 
-    log.info(s"${operationObject.splitList[Int](list1, (x) =>  x % 2 == 0 )}")
+    log.info(s"${operationObject.splitList[Int](list1, function )}")
   }
 }
 
